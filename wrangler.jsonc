@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "mik-ger512-com",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "mik-plants",
+      "database_id": "47445be0-f993-42d7-a13a-943eea29b579"
+    }
+  ],
+  "routes": [
+    { "pattern": "mik.ger512.com", "custom_domain": true }
+  ]
+}
